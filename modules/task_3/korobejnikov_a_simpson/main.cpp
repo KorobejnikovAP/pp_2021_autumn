@@ -63,8 +63,8 @@ TEST(MultipleIntegraion, Integral_with_2_dimension) {
     std::vector<std::pair<double, double>> dist(n);
     std::vector<int> distr(n);
     if (rank == 0) {
-        dist[0] = { 4, 10 }; distr[0] = 100;
-        dist[1] = { 1, 56 }; distr[1] = 100;
+        dist[0] = { 4, 10 }; distr[0] = 30;
+        dist[1] = { 1, 56 }; distr[1] = 30;
     }
     double result = ParallelVersion(func1, dist, distr);
     if (rank == 0) {
@@ -81,8 +81,8 @@ TEST(MultipleIntegraion, Integral_with_2_dimension_again) {
     std::vector<std::pair<double, double>> dist(n);
     std::vector<int> distr(n);
     if (rank == 0) {
-        dist[0] = { 4, 10 }; distr[0] = 100;
-        dist[1] = { 1, 56 }; distr[1] = 100;
+        dist[0] = { 4, 10 }; distr[0] = 30;
+        dist[1] = { 1, 56 }; distr[1] = 30;
     }
     double result = ParallelVersion(func7, dist, distr);
     if (rank == 0) {
@@ -99,7 +99,7 @@ TEST(MultipleIntegraion, Integral_with_3_dimension) {
     std::vector<std::pair<double, double>> dist(n);
     std::vector<int> distr(n);
     if (rank == 0) {
-        dist[0] = { 0, 1 }; distr[0] = 100;
+        dist[0] = { 0, 1 }; distr[0] = 10;
         dist[1] = { -13, 5 }; distr[1] = 10;
         dist[2] = { 3, 7 }; distr[2] = 10;
     }
